@@ -1,38 +1,23 @@
-<!DOCTYPE html>
-<html>
-<body>
+   
+   <p>this is text</p>
 
-<h2>Creating an Object from a JSON String</h2>
+   <p id="p1">don't read me</p>
+ 
 
-<p>this is text</p>
+   <p id="wordlist"></p>
+    <script type = "module">
+        /*json file is grabbed and parsed by the response*/
+        const wordlist = await fetch('./en_US.json')
+            .then(response => response.json());
+            console.log(json);
 
-<p id="p1">don't read me</p>
+        /**/
 
+        console.log(document.getElementById("wordlist") = wordlist.abt);
 
-<p id="demo"></p>
-<script>
-const txt = `{
-            "'cause":"/kəz/",
-            "'course":"/ˈkɔɹs/",
-            "'cuse":"/ˈkjuz/",
-            "'em":"/əm/",
-            "'frisco":"/ˈfɹɪskoʊ/",
-            "'gain":"/ˈɡɛn/",
-            "'kay":"/ˈkeɪ/",
-            "'m":"/əm/",
-            "'n":"/ən/"}`
+        /* document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;*/
 
+        const word = Object.keys(obj); /*gets an array*/
+        document.getElementById("p1").innerHTML = word[Math.floor(Math.random() * 10)];
 
-const obj = JSON.parse(txt);
-
-document.getElementById("demo").innerHTML = obj['\'course'];
-
-
-const word = Object.keys(obj); /*gets an array*/
-document.getElementById("p1").innerHTML = word[Math.floor(Math.random() * 10)];
-
-
-</script>
-
-</body>
-</html>
+    </script>
