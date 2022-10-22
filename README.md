@@ -5,3 +5,5 @@ Project goal:
 [] Show an IPA version of the randomly chosen word 
 [] Prompt user to type in the actual word 
 [] If yes, win
+
+Visit the page here: https://spacecat-max.github.io/test/
