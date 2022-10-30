@@ -4,9 +4,19 @@
    <p id="p1">english version</p>
 <p id="p2">ipa version</p>
  
+   <!---<p id="wordlist"></p>-->
 
-   <p id="wordlist"></p>
+<button onclick="clickButton()">Click me</button>
+
+<p id="demo"></p>
+
+
+
     <script type = "module">
+       function clickButton() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+       
         /*json file is grabbed and parsed by the response*/
          const wordobject = await fetch('./en_US.json')
             .then(response => response.json());
@@ -24,6 +34,10 @@
        
             document.getElementById("p1").innerHTML = english_word[random_num];
       document.getElementById("p2").innerHTML =  ipa_word[random_num];
+       
+       
+       
+       
 
 
     </script>
