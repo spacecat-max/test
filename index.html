@@ -1,8 +1,8 @@
    
    <p>this is text</p>
 
-   <p id="p1">don't read me</p>
-<p id="p2">don't read me</p>
+   <p id="p1">english version</p>
+<p id="p2">ipa version</p>
  
 
    <p id="wordlist"></p>
@@ -15,10 +15,10 @@
        /*with the array now made, you get the first value from the array*/
         const wordlist = wordobject['en_US'][0];
        
-      const random_num = Math.floor(Math.random() * 10)
+      const random_num = Math.floor(Math.random() * 10);
        
         const english_word = Object.keys(wordlist); /*makes an array of keys. keys are the stuff before the colon on the json*/
-       const ipa_word = Object.value(wordlist); /*makes an array of values. after the colon on the json*/
+       const ipa_word = Object.values(wordlist); /*makes an array of values. after the colon on the json*/
             document.getElementById("p1").innerHTML = english_word[random_num];
       document.getElementById("p2").innerHTML =  ipa_word[random_num];
 
