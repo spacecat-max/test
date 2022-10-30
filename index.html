@@ -7,10 +7,13 @@
    <p id="wordlist"></p>
     <script type = "module">
         /*json file is grabbed and parsed by the response*/
-        const wordlist = await fetch('./en_US.json')
+        const wordobject = await fetch('./en_US.json')
             .then(response => response.json());
             /*console.log(json);*/
-
+       
+       /*with the array now made, you get something from the array*/
+        const wordlist = wordobject['en_US'][0];
+                                    
         const word = Object.keys(wordlist); /*gets an array*/
         document.getElementById("p1").innerHTML = word[Math.floor(Math.random() * 10)];
 
