@@ -15,10 +15,13 @@
        /*with the array now made, you get the first value from the array*/
         const wordlist = wordobject['en_US'][0];
        
-      const random_num = Math.floor(Math.random() * 10);
+      
        
         const english_word = Object.keys(wordlist); /*makes an array of keys. keys are the stuff before the colon on the json*/
        const ipa_word = Object.values(wordlist); /*makes an array of values. after the colon on the json*/
+       
+       const random_num = Math.floor(Math.random() * english_word.length);
+       
             document.getElementById("p1").innerHTML = english_word[random_num];
       document.getElementById("p2").innerHTML =  ipa_word[random_num];
 
